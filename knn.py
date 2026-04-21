@@ -36,7 +36,7 @@ knn = KNeighborsClassifier(n_neighbors=3, metric='euclidean')
 knn.fit(X, y)
 
 # Data baru
-new_data = np.array([[10,3]])
+new_data = np.array([[5,3]])
 
 # Prediksi
 prediction = knn.predict(new_data)
@@ -44,5 +44,6 @@ prediction = knn.predict(new_data)
 # Convert ke label
 label_map = {0: "Eligible", 1: "Not Eligible"}
 
+print("Data to predict = Salary:", new_data[0][0], "MIO, Debt:", new_data[0][1], "MIO")
 print("Prediction (numeric):", prediction[0])
 print("Prediction (label):", label_map[prediction[0]])
